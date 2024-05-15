@@ -9,9 +9,11 @@ import kotlin.coroutines.coroutineContext
 class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
     var departStationText: TextView? = null
     var arriveStationText: TextView? = null
+    var indexNum: TextView? = null
 
     init {
         departStationText = itemView.findViewById(R.id.departStationText)
         arriveStationText = itemView.findViewById(R.id.arriveStationText)
+        indexNum = itemView.findViewById(R.id.indexNum)
     }
 }

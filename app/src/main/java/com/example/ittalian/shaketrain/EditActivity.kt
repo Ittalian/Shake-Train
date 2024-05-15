@@ -9,6 +9,10 @@ import com.example.ittalian.shaketrain.databinding.ActivityEditBinding
 import io.realm.Realm
 import io.realm.kotlin.createObject
 import io.realm.kotlin.where
+import java.io.BufferedReader
+import java.io.InputStreamReader
+import java.net.URL
+import org.json.JSONObject
 
 class EditActivity : AppCompatActivity() {
     private lateinit var realm: Realm
@@ -75,5 +79,28 @@ class EditActivity : AppCompatActivity() {
     override fun onDestroy() {
         super.onDestroy()
         realm.close()
+    }
+
+    fun getApiResponse() {
+
+        //APIキー
+//        val API_KEY = "[APIキー]"
+        //都市のID(横浜)
+//        val CITY_ID = 1848354
+        //アクセスする際のURL
+        val API_URL = "https://api.ekispert.jp/v1/json/search/course/light?key=LE_AMqrnRyAKmFNn&from=荻窪&to=溜池山王"
+//        +
+//                "id=" + CITY_ID + "&" +
+//                "APPID=" + API_KEY
+        var url = URL(API_URL)
+
+        //APIから情報を取得する.
+        var br = BufferedReader(InputStreamReader(url.openStream()))
+
+        //json形式のデータとして識別
+        var json = JSONObject(br.toString())
+
+        //cityのキーに対応するvalueを表示する．
+        Log.v("response", "${json}")
     }
 }
