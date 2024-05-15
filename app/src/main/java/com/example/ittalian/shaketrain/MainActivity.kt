@@ -39,7 +39,6 @@ class MainActivity : AppCompatActivity() {
 
         realm = Realm.getDefaultInstance()
         val mainUrl = "https://api.ekispert.jp/v1/json/search/course/light"
-        val apiKey =   "LE_AMqrnRyAKmFNn"
 //        val departStation
 //        val arriveStation
 //        val request = "$mainUrl&key=$apiKey&${departStation.text}&${arriveStation.text}"
