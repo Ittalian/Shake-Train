@@ -6,4 +6,5 @@
     <string name="save_btn">保存</string>
     <string name="delete_btn">削除</string>
     <string name="between_station">～</string>
+    <string name="api_key">LE_AMqrnRyAKmFNn</string>
 </resources>
