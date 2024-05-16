@@ -14,6 +14,10 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ShakeTrain"
         tools:targetApi="31">
+        <service android:name=".RecognizeShakeService"
+            android:enabled="true"
+            android:exported="true" />
+
         <activity
             android:name=".EditActivity"
             android:exported="false"/>

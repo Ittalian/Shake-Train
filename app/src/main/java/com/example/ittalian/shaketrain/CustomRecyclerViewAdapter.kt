@@ -24,7 +24,7 @@ class CustomRecyclerViewAdapter(realmResults: RealmResults<Course>) : RecyclerVi
         val course = rResult[position]
         holder.departStationText?.text = course?.departStaion.toString()
         holder.arriveStationText?.text = course?.arriveStation.toString()
-        holder.indexNum?.text = (position + 1).toString()
+        holder.index?.text = (position + 1).toString()
         holder.itemView.setBackgroundColor(if (position % 2 == 0) Color.LTGRAY else Color.WHITE)
         holder.itemView.setOnClickListener {
             val intent = Intent(it.context, EditActivity::class.java)
