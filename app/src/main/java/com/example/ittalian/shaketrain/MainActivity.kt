@@ -3,16 +3,15 @@ package com.example.ittalian.shaketrain
 import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
-import android.provider.Settings
-import android.util.Log
+import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.example.ittalian.shaketrain.databinding.ActivityEditBinding
 import com.example.ittalian.shaketrain.databinding.ActivityMainBinding
 import io.realm.Realm
 import io.realm.Sort
-import io.realm.kotlin.BuildConfig
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
@@ -40,8 +39,7 @@ class MainActivity : AppCompatActivity() {
 
         realm = Realm.getDefaultInstance()
         val mainUrl = "https://api.ekispert.jp/v1/json/search/course/light"
-        val apiKey = getString(R.string.api_key)
-        Log.v("env", "$apiKey")
+        val apiKey =   "LE_AMqrnRyAKmFNn"
 //        val departStation
 //        val arriveStation
 //        val request = "$mainUrl&key=$apiKey&${departStation.text}&${arriveStation.text}"
